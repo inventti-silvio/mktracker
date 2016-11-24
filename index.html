@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #wrapper { width:100%; height:100%; position:absolute; }
+            #container { width:100%; height:100%; }
+            #cursor {
+                background-color: red;
+                color: red;
+                z-index: 100000;
+                width: 5px;
+                height: 5px;
+                position: absolute;
+            }
+            body {
+                height: 2000px;
+            }
+         </style>
+        <script src="./mkrecorder.js"></script>
+        <script src="./heatmap.js"></script>
+
+    </head>
+    <body>
+    <div id="cursor"></div>
+    <div id="wrapper">
+        <div id="container">
+
+        </div>    
+    </div>
+    <script>
+
+        var heatmap = h337.create({
+          container: document.getElementById('container'),
+          maxOpacity: .6,
+          radius: 50,
+          blur: .90,
+          backgroundColor: 'rgba(0, 0, 58, 0.96)'
+        });
+
+        var mouse = new Mouse(window); 
+        var cursor = new Cursor(document.getElementById('cursor'));
+
+    </script>
+    </body>
+</html>
